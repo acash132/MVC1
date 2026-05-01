@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index-Data From Action</h2>
+
+<p>Product Id: @ViewData["ProductId"]</p>
+<p>Product Name: @ViewData["ProductName"]</p>
+<p>Quantity: @ViewData["Quantity"]</p>
+<p>Price: @ViewData["Price"]</p>
+<p>Status: @ViewData["Status"]</p>
+
+<h1>Product Details Table Format</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {
+        <tr>
+            <td>@ViewData["ProductId"]</td>
+            <td>@ViewData["ProductName"]</td>
+            <td>@ViewData["Quantity"]</td>
+            <td>@ViewData["Price"]</td>
+            <td>@ViewData["Status"]</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+@*@foreach (var product in ViewData["Products"] as List<MVCFirst.Models.ProductModel>)
+    {
+        <tr>
+            <td>@product.ProductId</td>
+            <td>@product.ProductName</td>
+            <td>@product.Quantity</td>
+            <td>@product.Price</td>
+            <td>@product.Status</td>
+        </tr>
+    }*@
