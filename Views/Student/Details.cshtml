@@ -1,0 +1,11 @@
+﻿@model MVCFirst.Models.StudentModel1
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<h1>Student ID: @Model.StudentId</h1>
+<h1>Student Name: @Model.StudentName</h1>
+<h1>Age: @Model.Age</h1>
+<h1>Email: @Model.Email</h1>
+<h1>Enrollment Date: @Model.EnrollmentDate.ToShortDateString()  </h1>

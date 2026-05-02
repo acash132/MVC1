@@ -16,7 +16,7 @@ namespace MVCFirst
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Product", action = "Index1", id = UrlParameter.Optional }
+                defaults: new { controller = "Student", action = "ListStudent", id = UrlParameter.Optional }
             );
         }
     }

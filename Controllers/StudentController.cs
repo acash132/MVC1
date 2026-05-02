@@ -24,5 +24,32 @@ namespace MVCFirst.Controllers
             }
             return View(student);
         }
-    }
+
+
+        public ActionResult Details()
+        {
+            StudentModel1 student = new StudentModel1()
+            { 
+                StudentId = 1,
+                StudentName = "Akash",
+                Age = 25,
+                Email = "akash@example.com",
+                EnrollmentDate = DateTime.Now
+            };
+            return View(student);
+        }
+
+        public ActionResult ListStudent()
+        { 
+            List<StudentModel1> students = new List<StudentModel1>
+            {
+                new StudentModel1 { StudentId = 1, StudentName = "Akash", Age = 25, Email = "akash@example.com", EnrollmentDate = DateTime.Now },
+                new StudentModel1 { StudentId = 2, StudentName = "John", Age = 22, Email = "john@example.com", EnrollmentDate = DateTime.Now },
+                new StudentModel1 { StudentId = 3, StudentName = "Jane", Age = 24, Email = "jane@example.com", EnrollmentDate = DateTime.Now }
+            };
+            return View(students);
+        }
+
+
+        }
 }
