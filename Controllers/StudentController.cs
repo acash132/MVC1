@@ -50,6 +50,17 @@ namespace MVCFirst.Controllers
             return View(students);
         }
 
-
+        public ActionResult ListEmployee()
+        {
+            List<EmployeeModel> employees = new List<EmployeeModel>
+            {
+                new EmployeeModel { EmployeeId = 1, EmployeeName = "Akash", Age = 25, Email = "akash@example.com", DOB = DateTime.Now },
+                new EmployeeModel { EmployeeId = 2, EmployeeName = "John", Age = 22, Email = "john@example.com", DOB = DateTime.Now },
+                new EmployeeModel { EmployeeId = 3, EmployeeName = "Jane", Age = 24, Email = "jane@example.com", DOB = DateTime.Now }
+            };
+            return View(employees);
         }
+
+
+    }
 }

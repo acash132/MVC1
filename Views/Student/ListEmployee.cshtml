@@ -1,0 +1,28 @@
+﻿@Model MVCFirst.Models.EmployeeModel
+
+@{
+    ViewBag.Title = "ListEmployee";
+}
+
+<h2>ListEmployee</h2>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>DOB</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.EmployeeId</td>
+            <td>@item.EmployeeName</td>
+            <td>@item.Age</td>
+            <td>@item.Email</td>
+            <td>@item.DOB.ToShortDateString()</td>
+        </tr>
+    }
+</table>
+
